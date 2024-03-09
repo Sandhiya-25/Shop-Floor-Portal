@@ -1,0 +1,81 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="keerthu_sfkeerthu_sf.controller.plannedorder"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="app">
+		<pages>
+			<Page title="PLANNEDORDER">
+			<Button width="39.5rem" text="PLAN ORDER" type="Emphasized" press="onLogins"></Button>
+				<Button width="39.5rem" text="PRODUCTION ORDER" type="Emphasized" press="onLogin"></Button>
+				<content>
+					<Table id="producttable" items="{/results}">
+						<columns>
+							<Column width="4em">
+								<Text text="Planned Order Number"/>
+							</Column>
+							<Column width="4em">
+								<Text text="Material Number"/>
+							</Column>
+							<Column width="4em">
+								<Text text="Plan Plant"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Production Plant"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Total Plant Quantity"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Fixed Scrap Quantity"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Order Start Date"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Order End Date"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Planned Opening Date"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Mrp Controller"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Order Type"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Procurement Type"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Special Procurement Type"/>
+							</Column>
+							<Column width="4em">
+								<Text text="Goods Procurement Time"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{PlannedorderNum}"/>
+								    <Text text="{Material}"/>
+								    <Text text="{PlanPlant}"/>
+								    <Text text="{ProdPlant}"/>
+	                                <Text text="{TotalPlordQty}"/>
+								    <Text text="{FixedScrapQty}"/>
+							        <Text text="{OrderStartDate}"/>
+									<Text text="{OrderFinDate}"/>
+								    <Text text="{PlanOpenDate}"/>
+								    <Text text="{MrpController}"/>
+								    <Text text="{OrderType}"/>
+								    <Text text="{ProcurementType}"/>
+								    <Text text="{SpecialprocType}"/>
+								    <Text text="{GrProcTime}"/>
+								    <!--<Button icon="sap-icon://display-more" width="80px" id="__button1" press="onClickCell"/>-->
+								     
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

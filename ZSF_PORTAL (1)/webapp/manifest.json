@@ -1,0 +1,147 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "keerthu_sfkeerthu_sf",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZKEERTHU_ODATA_SRV": {
+				"uri": "/sap/opu/odata/sap/ZKEERTHU_ODATA_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "keerthu_sfkeerthu_sf.view.View1",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "keerthu_sfkeerthu_sf.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"targets": {
+				"plannedorder": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "plannedorder",
+					"viewLevel": 2
+				},
+				"productionorder": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "productionorder",
+					"viewLevel": 3
+				},
+				"view1": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "view1",
+					"viewLevel": 1
+				}
+			},
+			"routes": [
+				{
+					"name": "view1",
+					"pattern": "view1",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"view1"
+					]
+				},
+				{
+					"name": "plannedorder",
+					"pattern": "plannedorder",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"plannedorder"
+					]
+				},
+				{
+					"name": "productionorder",
+					"pattern": "productionorder",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"productionorder"
+					]
+				}
+			],
+			"config": {
+				"viewPath": "keerthu_sfkeerthu_sf.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"routerClass": "sap.m.routing.Router",
+				"viewLevel": 1,
+				"clearControlAggregation": false,
+				"async": true
+			}
+		}
+	}
+}

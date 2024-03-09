@@ -1,0 +1,85 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="keerthu_sfkeerthu_sf.controller.productionorder" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="app">
+		<pages>
+			<Page title="PRODUCTIONORDERS">
+				<Button width="39.5rem" text="PLAN ORDER" type="Emphasized" press="onLogins"></Button>
+				<Button width="39.5rem" text="PRODUCTION ORDER" type="Emphasized" press="onLogin"></Button>
+			<content>
+					<Table id="producttable" items="{/results}">
+						<columns>
+							<Column width="4em">
+								<Text text="Planned Order Number"/>
+							</Column>
+							<Column width="4em">
+								<Text text="Production Plant"/>
+							</Column>
+							<Column width="4em">
+								<Text text="Mrp Controller"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Material Number"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Expiration Date"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Routing Number"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Reservation Number"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Schedule Release Date"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Actual Release Date"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Finish Date"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Start Date"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Production Finsih Date"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Production Start Date"/>
+							</Column>
+							<Column width="4em">
+								<Text text="Target Quantity"/>
+							</Column>
+								<Column width="4em">
+								<Text text="Created By"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{OrderNumber}"/>
+								    <Text text="{ProductionPlant}"/>
+								    <Text text="{MrpController}"/>
+								    <Text text="{Material}"/>
+	                                <Text text="{ExplDate}"/>
+								    <Text text="{RoutingNo}"/>
+							        <Text text="{ReservationNumber}"/>
+									<Text text="{SchedReleaseDate}"/>
+								    <Text text="{ActualReleaseDate}"/>
+								    <Text text="{FinishDate}"/>
+								    <Text text="{StartDate}"/>
+								    <Text text="{ProductionFinishDate}"/>
+								    <Text text="{ProductionStartDate}"/>
+								    <Text text="{TargetQuantity}"/>
+								     <Text text="{EnteredBy}"/>
+								    <!--<Button icon="sap-icon://display-more" width="80px" id="__button1" press="onClickCell"/>-->
+								     
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
